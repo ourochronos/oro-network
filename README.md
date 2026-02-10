@@ -1,4 +1,4 @@
-# oro-network
+# our-network
 
 P2P networking module for the ourochronos ecosystem
 
@@ -9,13 +9,13 @@ _Brief description of what this brick does and why it exists._
 ## Install
 
 ```bash
-pip install oro-network
+pip install our-network
 ```
 
 ## Usage
 
 ```python
-from oro_network import ...
+from our_network import ...
 ```
 
 ## API

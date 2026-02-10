@@ -16,7 +16,7 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.router import Connection, QueuedMessage, RouterNode
+from our_network.router import Connection, QueuedMessage, RouterNode
 
 # =============================================================================
 # Unit Tests - Data Classes

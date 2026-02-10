@@ -15,7 +15,7 @@ import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
 
-from oro_network.messages import (
+from our_network.messages import (
     MESSAGE_SIZE_BUCKETS,
     CoverMessage,
     calculate_padding_overhead,
@@ -24,7 +24,7 @@ from oro_network.messages import (
     pad_message,
     unpad_message,
 )
-from oro_network.node import (
+from our_network.node import (
     CoverTrafficConfig,
     NodeClient,
 )

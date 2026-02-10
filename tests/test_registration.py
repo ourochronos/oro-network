@@ -20,8 +20,8 @@ from unittest.mock import AsyncMock, MagicMock
 import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
-from oro_network.router import RouterNode
-from oro_network.seed import RouterRecord, SeedConfig, SeedNode
+from our_network.router import RouterNode
+from our_network.seed import RouterRecord, SeedConfig, SeedNode
 
 # =============================================================================
 # FIXTURES

@@ -17,11 +17,11 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.discovery import (
+from our_network.discovery import (
     DiscoveryClient,
     RouterInfo,
 )
-from oro_network.seed import (
+from our_network.seed import (
     RouterRecord,
     SeedConfig,
     SeedNode,

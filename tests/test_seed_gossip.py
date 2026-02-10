@@ -18,7 +18,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
-from oro_network.seed import (
+from our_network.seed import (
     RouterRecord,
     SeedConfig,
     SeedNode,
@@ -588,7 +588,7 @@ class TestGossipRound:
             }
         )
 
-        with patch("oro_network.seed.peers.aiohttp.ClientSession") as mock_session:
+        with patch("our_network.seed.peers.aiohttp.ClientSession") as mock_session:
             mock_ctx = MagicMock()
             mock_ctx.__aenter__ = AsyncMock(return_value=mock_response)
             mock_ctx.__aexit__ = AsyncMock()

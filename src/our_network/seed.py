@@ -2,14 +2,14 @@
 Valence Seed Node - The "phone book" for router discovery.
 
 This module is a backward-compatibility shim. The implementation has been
-refactored into the oro_network.seed package.
+refactored into the our_network.seed package.
 
 For new code, import directly from the package:
-    from oro_network.seed import SeedNode, SeedConfig, create_seed_node
+    from our_network.seed import SeedNode, SeedConfig, create_seed_node
 """
 
 # Re-export everything from the new package location for backward compatibility
-from oro_network.seed import (
+from our_network.seed import (
     COUNTRY_TO_CONTINENT,
     CorrelationDetector,
     HealthMonitor,

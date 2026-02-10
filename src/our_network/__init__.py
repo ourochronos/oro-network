@@ -7,7 +7,7 @@ router nodes, ensuring routers cannot read message content.
 
 __version__ = "0.1.0"
 
-from oro_network.config import (
+from our_network.config import (
     PRIVACY_HIGH,
     PRIVACY_LOW,
     PRIVACY_MEDIUM,
@@ -22,11 +22,11 @@ from oro_network.config import (
 )
 
 # Decomposed NodeClient components (Issue #128)
-from oro_network.connection_manager import (
+from our_network.connection_manager import (
     ConnectionManager,
     ConnectionManagerConfig,
 )
-from oro_network.crypto import (
+from our_network.crypto import (
     KeyPair,
     create_onion,
     decrypt_backward_layers,
@@ -44,7 +44,7 @@ from oro_network.crypto import (
     generate_identity_keypair,
     peel_onion,
 )
-from oro_network.discovery import (
+from our_network.discovery import (
     DiscoveryClient,
     DiscoveryError,
     NoSeedsAvailableError,
@@ -53,15 +53,15 @@ from oro_network.discovery import (
     create_discovery_client,
     discover_routers,
 )
-from oro_network.health_monitor import (
+from our_network.health_monitor import (
     HealthMonitor,
     HealthMonitorConfig,
 )
-from oro_network.message_handler import (
+from our_network.message_handler import (
     MessageHandler,
     MessageHandlerConfig,
 )
-from oro_network.messages import (
+from our_network.messages import (
     # Circuit messages (Issue #115)
     Circuit,
     CircuitCreatedMessage,
@@ -73,7 +73,7 @@ from oro_network.messages import (
     DeliverPayload,
     RelayMessage,
 )
-from oro_network.node import (
+from our_network.node import (
     ConnectionState,
     CoverTrafficConfig,
     FailoverState,
@@ -87,7 +87,7 @@ from oro_network.node import (
     StateConflictError,
     create_node_client,
 )
-from oro_network.qos import (
+from our_network.qos import (
     DEFAULT_DIMENSION_WEIGHTS,
     MAX_CONTRIBUTION_SCORE,
     NEW_USER_MINIMUM_SCORE,
@@ -97,12 +97,12 @@ from oro_network.qos import (
     PriorityTier,
     QoSPolicy,
 )
-from oro_network.qos_manager import (
+from our_network.qos_manager import (
     LoadMetrics,
     NodeQoSState,
     QoSManager,
 )
-from oro_network.router import (
+from our_network.router import (
     # Circuit state (Issue #115)
     CircuitHopState,
     CircuitState,
@@ -111,11 +111,11 @@ from oro_network.router import (
     QueuedMessage,
     RouterNode,
 )
-from oro_network.router_client import (
+from our_network.router_client import (
     RouterClient,
     RouterClientConfig,
 )
-from oro_network.seed import (
+from our_network.seed import (
     # Regional routing utilities
     COUNTRY_TO_CONTINENT,
     HealthState,
@@ -126,7 +126,7 @@ from oro_network.seed import (
     compute_region_score,
     get_continent,
 )
-from oro_network.seed import (
+from our_network.seed import (
     HealthMonitor as SeedHealthMonitor,  # Renamed to avoid conflict with health_monitor.HealthMonitor
 )
 

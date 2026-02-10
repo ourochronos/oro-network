@@ -14,10 +14,10 @@ from typing import TYPE_CHECKING, Any
 import aiohttp
 from aiohttp import web
 
-from oro_network.seed.router import RouterRecord
+from our_network.seed.router import RouterRecord
 
 if TYPE_CHECKING:
-    from oro_network.seed.seed_node import SeedNode
+    from our_network.seed.seed_node import SeedNode
 
 # Use cryptographically secure RNG for router sampling (prevents predictable patterns)
 _secure_random = secrets.SystemRandom()

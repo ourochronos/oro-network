@@ -16,8 +16,8 @@ from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 
 if TYPE_CHECKING:
-    from oro_network.messages import SeedRevocationList
-    from oro_network.seed.config import SeedConfig
+    from our_network.messages import SeedRevocationList
+    from our_network.seed.config import SeedConfig
 
 logger = logging.getLogger(__name__)
 
@@ -305,7 +305,7 @@ class SeedRevocationManager:
             return 0, errors
 
         # Import here to avoid circular imports
-        from oro_network.messages import SeedRevocationList
+        from our_network.messages import SeedRevocationList
 
         try:
             revocation_list = SeedRevocationList.from_dict(data)

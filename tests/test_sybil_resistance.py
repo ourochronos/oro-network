@@ -15,7 +15,7 @@ import time
 
 import pytest
 
-from oro_network.seed import (
+from our_network.seed import (
     CorrelationDetector,
     RateLimiter,
     RegistrationEvent,
@@ -521,7 +521,7 @@ class TestSeedNodeSybilIntegration:
 
     def test_select_routers_filters_low_reputation(self, seed_node):
         """Router selection should filter low reputation routers."""
-        from oro_network.seed import RouterRecord
+        from our_network.seed import RouterRecord
 
         now = time.time()
 

@@ -18,13 +18,13 @@ import time
 
 import pytest
 
-from oro_network.qos import (
+from our_network.qos import (
     ContributionDimension,
     ContributionScore,
     PriorityTier,
     QoSPolicy,
 )
-from oro_network.qos_manager import (
+from our_network.qos_manager import (
     LoadMetrics,
     NodeQoSState,
     QoSManager,

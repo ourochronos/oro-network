@@ -19,7 +19,7 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.seed import (
+from our_network.seed import (
     RouterRecord,
     SeedConfig,
     SeedNode,
@@ -664,7 +664,7 @@ class TestThunderingHerdPrevention:
         seed_node.router_registry[router_id] = router
 
         # Simulate recovery scenario
-        from oro_network.seed import HealthState, HealthStatus
+        from our_network.seed import HealthState, HealthStatus
 
         seed_node.health_monitor.health_states[router_id] = HealthState(
             status=HealthStatus.HEALTHY,
@@ -701,7 +701,7 @@ class TestThunderingHerdPrevention:
 
         # Simulate recovery that happened 150 seconds ago (halfway through ramp)
         recovery_time = time.time() - 150  # 150s ago, ramp is 300s
-        from oro_network.seed import HealthState, HealthStatus
+        from our_network.seed import HealthState, HealthStatus
 
         seed_node.health_monitor.health_states[router_id] = HealthState(
             status=HealthStatus.HEALTHY,
@@ -738,7 +738,7 @@ class TestThunderingHerdPrevention:
 
         # Simulate recovery that completed 400 seconds ago (beyond 300s ramp)
         recovery_time = time.time() - 400
-        from oro_network.seed import HealthState, HealthStatus
+        from our_network.seed import HealthState, HealthStatus
 
         seed_node.health_monitor.health_states[router_id] = HealthState(
             status=HealthStatus.HEALTHY,
@@ -789,7 +789,7 @@ class TestThunderingHerdPrevention:
         seed_node.health_monitor.record_heartbeat(healthy_router.router_id)
 
         # Recovering router - simulate just-recovered state
-        from oro_network.seed import HealthState, HealthStatus
+        from our_network.seed import HealthState, HealthStatus
 
         seed_node.health_monitor.health_states[recovering_router.router_id] = HealthState(
             status=HealthStatus.HEALTHY,

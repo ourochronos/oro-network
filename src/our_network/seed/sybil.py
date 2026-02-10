@@ -8,10 +8,10 @@ import logging
 from collections import defaultdict
 from typing import TYPE_CHECKING, Any
 
-from oro_network.seed.reputation import RateLimiter, ReputationManager
+from our_network.seed.reputation import RateLimiter, ReputationManager
 
 if TYPE_CHECKING:
-    from oro_network.seed.config import SeedConfig
+    from our_network.seed.config import SeedConfig
 
 logger = logging.getLogger(__name__)
 

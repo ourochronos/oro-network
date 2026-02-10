@@ -1,1 +1,1 @@
-"""Tests for oro_network module."""
+"""Tests for our_network module."""

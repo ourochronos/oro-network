@@ -7,13 +7,13 @@ import json
 import pytest
 from cryptography.exceptions import InvalidSignature
 
-from oro_network.crypto import (
+from our_network.crypto import (
     decrypt_message,
     encrypt_message,
     generate_encryption_keypair,
     generate_identity_keypair,
 )
-from oro_network.messages import DeliverPayload, RelayMessage
+from our_network.messages import DeliverPayload, RelayMessage
 
 
 class TestKeyGeneration:

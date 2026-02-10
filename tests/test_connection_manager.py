@@ -16,11 +16,11 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
-from oro_network.connection_manager import (
+from our_network.connection_manager import (
     ConnectionManager,
     ConnectionManagerConfig,
 )
-from oro_network.discovery import RouterInfo
+from our_network.discovery import RouterInfo
 
 # =============================================================================
 # Fixtures
@@ -431,7 +431,7 @@ class TestConnectionManagerIntegration:
         mock_ws.closed = False
         mock_session = AsyncMock()
 
-        from oro_network.node import RouterConnection
+        from our_network.node import RouterConnection
 
         conn = RouterConnection(
             router=mock_router_info,

@@ -20,13 +20,13 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.discovery import DiscoveryClient
-from oro_network.messages import (
+from our_network.discovery import DiscoveryClient
+from our_network.messages import (
     RevocationReason,
     SeedRevocation,
     SeedRevocationList,
 )
-from oro_network.seed import (
+from our_network.seed import (
     SeedConfig,
     SeedNode,
     SeedRevocationManager,

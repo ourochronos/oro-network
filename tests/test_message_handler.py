@@ -18,16 +18,16 @@ import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
 
-from oro_network.config import (
+from our_network.config import (
     BatchingConfig,
     TimingJitterConfig,
     TrafficAnalysisMitigationConfig,
 )
-from oro_network.message_handler import (
+from our_network.message_handler import (
     MessageHandler,
     MessageHandlerConfig,
 )
-from oro_network.messages import AckMessage
+from our_network.messages import AckMessage
 
 # =============================================================================
 # Fixtures
@@ -78,7 +78,7 @@ def message_handler(ed25519_keypair, x25519_keypair, config):
 @pytest.fixture
 def mock_router_selector():
     """Create a mock router selector function."""
-    from oro_network.discovery import RouterInfo
+    from our_network.discovery import RouterInfo
 
     router = RouterInfo(
         router_id="b" * 64,
@@ -199,7 +199,7 @@ class TestACKHandling:
 
     def test_handle_ack_success(self, message_handler, x25519_keypair):
         """Test handling successful ACK."""
-        from oro_network.node import PendingAck
+        from our_network.node import PendingAck
 
         message_id = "test-message-001"
         _, pub_key = x25519_keypair
@@ -230,7 +230,7 @@ class TestACKHandling:
 
     def test_handle_e2e_ack(self, message_handler, x25519_keypair):
         """Test handling E2E acknowledgment."""
-        from oro_network.node import PendingAck
+        from our_network.node import PendingAck
 
         message_id = "test-message-001"
         _, pub_key = x25519_keypair
@@ -373,7 +373,7 @@ class TestQueueProcessing:
         x25519_keypair,
     ):
         """Test that old messages are dropped during queue processing."""
-        from oro_network.node import PendingMessage
+        from our_network.node import PendingMessage
 
         _, pub_key = x25519_keypair
 
@@ -428,7 +428,7 @@ class TestMessageHandlerIntegration:
     @pytest.mark.asyncio
     async def test_send_message_queue_full(self, message_handler, x25519_keypair, mock_send_via_router):
         """Test sending message when queue is full."""
-        from oro_network.node import NoRoutersAvailableError, PendingMessage
+        from our_network.node import NoRoutersAvailableError, PendingMessage
 
         _, pub_key = x25519_keypair
 
@@ -532,7 +532,7 @@ class TestCallbackHandling:
 
     def test_ack_timeout_callback(self, message_handler, x25519_keypair):
         """Test that ACK timeout callback is called."""
-        from oro_network.node import PendingAck
+        from our_network.node import PendingAck
 
         callback_args = []
 

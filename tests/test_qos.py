@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import time
 
-from oro_network.qos import (
+from our_network.qos import (
     DEFAULT_DIMENSION_WEIGHTS,
     NEW_USER_MINIMUM_SCORE,
     TIER_WEIGHTS,

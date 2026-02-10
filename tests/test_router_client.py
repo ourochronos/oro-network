@@ -16,13 +16,13 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.connection_manager import (
+from our_network.connection_manager import (
     ConnectionManager,
     ConnectionManagerConfig,
 )
-from oro_network.discovery import RouterInfo
-from oro_network.node import RouterConnection
-from oro_network.router_client import (
+from our_network.discovery import RouterInfo
+from our_network.node import RouterConnection
+from our_network.router_client import (
     RouterClient,
     RouterClientConfig,
 )

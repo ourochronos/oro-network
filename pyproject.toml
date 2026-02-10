@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "oro-network"
+name = "our-network"
 version = "0.1.0"
 description = "P2P networking module for the ourochronos ecosystem"
 readme = "README.md"
@@ -36,7 +36,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/oro_network"]
+packages = ["src/our_network"]
 
 [tool.ruff]
 target-version = "py311"
@@ -47,7 +47,7 @@ src = ["src", "tests"]
 select = ["E", "F", "I", "N", "W", "UP", "B", "C4"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["oro_network"]
+known-first-party = ["our_network"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -67,7 +67,7 @@ markers = [
 
 [tool.coverage.run]
 branch = true
-source = ["src/oro_network"]
+source = ["src/our_network"]
 
 [tool.coverage.report]
 show_missing = true

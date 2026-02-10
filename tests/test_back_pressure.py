@@ -17,8 +17,8 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
-from oro_network.messages import BackPressureMessage
-from oro_network.router import Connection, QueuedMessage, RouterNode
+from our_network.messages import BackPressureMessage
+from our_network.router import Connection, QueuedMessage, RouterNode
 
 # =============================================================================
 # Unit Tests - BackPressureMessage
@@ -484,8 +484,8 @@ class TestNodeBackPressureHandling:
 
     def test_router_connection_back_pressure_defaults(self):
         """Test RouterConnection back-pressure defaults."""
-        from oro_network.discovery import RouterInfo
-        from oro_network.node import RouterConnection
+        from our_network.discovery import RouterInfo
+        from our_network.node import RouterConnection
 
         router_info = RouterInfo(
             router_id="test-router",
@@ -512,8 +512,8 @@ class TestNodeBackPressureHandling:
 
     def test_router_connection_is_under_back_pressure(self):
         """Test is_under_back_pressure property."""
-        from oro_network.discovery import RouterInfo
-        from oro_network.node import RouterConnection
+        from our_network.discovery import RouterInfo
+        from our_network.node import RouterConnection
 
         router_info = RouterInfo(
             router_id="test-router",

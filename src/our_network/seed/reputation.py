@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
-    from oro_network.seed.config import SeedConfig
+    from our_network.seed.config import SeedConfig
 
 logger = logging.getLogger(__name__)
 

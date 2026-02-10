@@ -19,7 +19,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
-from oro_network.discovery import (
+from our_network.discovery import (
     DiscoveryClient,
     DiscoveryError,
     NoSeedsAvailableError,
@@ -676,7 +676,7 @@ class TestConvenienceFunctions:
     @pytest.mark.asyncio
     async def test_discover_routers_function(self, router_info):
         """discover_routers convenience function should work."""
-        with patch("oro_network.discovery.DiscoveryClient") as MockClient:  # noqa: N806
+        with patch("our_network.discovery.DiscoveryClient") as MockClient:  # noqa: N806
             mock_client = MagicMock()
             mock_client.discover_routers = AsyncMock(return_value=[router_info])
             mock_client.add_seed = MagicMock()

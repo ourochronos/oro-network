@@ -18,7 +18,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 import aiohttp
 import pytest
 
-from oro_network.seed import (
+from our_network.seed import (
     HealthState,
     HealthStatus,
     RouterRecord,

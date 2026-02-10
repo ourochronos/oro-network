@@ -17,10 +17,10 @@ import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
 
-from oro_network.discovery import RouterInfo
-from oro_network.message_handler import MessageHandler, MessageHandlerConfig
-from oro_network.messages import AckMessage, AckRequest, DeliverPayload
-from oro_network.node import (
+from our_network.discovery import RouterInfo
+from our_network.message_handler import MessageHandler, MessageHandlerConfig
+from our_network.messages import AckMessage, AckRequest, DeliverPayload
+from our_network.node import (
     NodeClient,
     PendingAck,
 )

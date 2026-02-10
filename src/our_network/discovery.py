@@ -271,8 +271,8 @@ class DiscoveryClient:
     # Hardcoded bootstrap seeds (can be overridden)
     default_seeds: list[str] = field(
         default_factory=lambda: [
-            "https://seed1.oro_network:8470",
-            "https://seed2.oro_network:8470",
+            "https://seed1.our_network:8470",
+            "https://seed2.our_network:8470",
         ]
     )
 
@@ -1162,7 +1162,7 @@ class DiscoveryClient:
             return 0, errors
 
         # Import here to avoid circular imports
-        from oro_network.messages import SeedRevocationList
+        from our_network.messages import SeedRevocationList
 
         try:
             revocation_list = SeedRevocationList.from_dict(data)

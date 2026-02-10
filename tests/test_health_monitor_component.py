@@ -19,11 +19,11 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from oro_network.health_monitor import (
+from our_network.health_monitor import (
     HealthMonitor,
     HealthMonitorConfig,
 )
-from oro_network.messages import (
+from our_network.messages import (
     HealthGossip,
     RouterHealthObservation,
 )
@@ -76,7 +76,7 @@ def health_monitor(mock_discovery, config):
 @pytest.fixture
 def mock_router_connection():
     """Create a mock RouterConnection."""
-    from oro_network.discovery import RouterInfo
+    from our_network.discovery import RouterInfo
 
     router = RouterInfo(
         router_id="b" * 64,

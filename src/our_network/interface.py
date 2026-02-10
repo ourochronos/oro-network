@@ -1,4 +1,4 @@
-"""Public interface for oro-network.
+"""Public interface for our-network.
 
 Define the abstract base classes that form this brick's public contract.
 Implementations live in their own modules.

@@ -39,12 +39,12 @@ from aiohttp import web
 from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 
-from oro_network.seed.config import SeedConfig
-from oro_network.seed.health import HealthMonitor
-from oro_network.seed.peers import SeedPeerManager
-from oro_network.seed.revocation import SeedRevocationManager
-from oro_network.seed.router import RouterRecord
-from oro_network.seed.sybil import SybilResistance
+from our_network.seed.config import SeedConfig
+from our_network.seed.health import HealthMonitor
+from our_network.seed.peers import SeedPeerManager
+from our_network.seed.revocation import SeedRevocationManager
+from our_network.seed.router import RouterRecord
+from our_network.seed.sybil import SybilResistance
 
 # Use cryptographically secure RNG for router sampling (prevents predictable patterns)
 _secure_random = secrets.SystemRandom()
@@ -844,7 +844,7 @@ class SeedNode:
             "seed_id": "seed-abc123",
             "timestamp": 1706789012.345,
             "routers": [...],
-            "other_seeds": ["https://seed2.oro_network"]
+            "other_seeds": ["https://seed2.our_network"]
         }
         """
         try:

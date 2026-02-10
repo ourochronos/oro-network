@@ -23,7 +23,7 @@ import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
 
-from oro_network.node import (
+from our_network.node import (
     STATE_VERSION,
     ConnectionState,
     FailoverState,
@@ -33,7 +33,7 @@ from oro_network.node import (
     StaleStateError,
     StateConflictError,
 )
-from oro_network.router import (
+from our_network.router import (
     NodeConnectionHistory,
     RouterNode,
 )
