@@ -1,6 +1,6 @@
 # oro-network
 
-P2P networking module for the orobobos ecosystem
+P2P networking module for the ourochronos ecosystem
 
 ## Overview
 
